@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrieren</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .flashes {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffeeba;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            list-style: none;
+            color: #856404;
+        }
+
+        .flashes li {
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<h1> willkommen </h1>
+
+
+<div class="container">
+        <h2>Registrierung</h2>
+
+        <form action="{{ url_for('register') }}" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for= "rolle"> rolle </label>
+            <select name= "rolle">
+            <option value = "Anbieter">Anbieter</option>
+                <option value = "Nutzer"> Nutzer</option>
+            </select>
+        </div>
+            <div class="form-group">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" name="nachname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="strasse">Straße</label>
+                <input type="text" id="strasse" name="strasse" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hausnummer">Hausnummer</label>
+                <input type="text" id="hausnummer" name="hausnummer" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plz">PLZ</label>
+                <input type="text" id="plz" name="plz" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ort">Ort</label>
+                <input type="text" id="ort" name="ort" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profilbild">Profilbild (optional)</label>
+                <input type="file" id="profilbild" name="profilbild" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="benutzername">Benutzername</label>
+                <input type="text" id="benutzername" name="benutzername" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+             </div>
+
+            <div>
+              <input type="submit" value="submit" style="border-radius: unset"> </input>   </input> <!-- bestätigung -->
+
+            </div>
+            {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+</body>
+</html>
