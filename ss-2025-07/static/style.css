@@ -1,263 +1,373 @@
-
-body{
-    font-family: 'roboto',sans-serif;/
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-background:#3b3b4f;
+.main-header {
+	width: 100%;
+	height: 50px;
+	background-color: #1b1b32;
+	padding: 10px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
 }
-header{
 
-background: transparent}
+.header-links {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 50px;
+	margin-right: 15px;
+}
+
+.logo-text {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: 1px;	
+}
+
+.nav-links {
+	display: flex;
+	gap: 25px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #444;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.nav_links a:hover {
+	color: #000;
+}
+
+
 
 footer {
-    margin-top: auto;/*ist eine automatische Berechnung des oberen Außenabstands.*/
-    background: transparent;
+	margin-top: auto;
+	/*ist eine automatische Berechnung des oberen Außenabstands.*/
+	background: transparent;
 
 }
 
-<style>
-footer{
-    aling:"center"
- }
-  footer {
-    background:transparent;
-    color: wheat;
-    padding: 20px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
+body {
+	font-family: 'roboto', sans-serif;/ min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #3b3b4f;
+}
 
-  }
+/* <style> */
+footer {
+	aling: "center"
+}
 
-  footer ul {
-    list-style: none;
-    padding: 0;/*padding bestimmt den Innenabstand zwischen dem Inhalt eines Elements und seinem Rand.
+footer {
+	background: transparent;
+	color: wheat;
+	padding: 20px 0;
+	text-align: center;
+	font-family: Arial, sans-serif;
+
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	/*padding bestimmt den Innenabstand zwischen dem Inhalt eines Elements und seinem Rand.
 
 padding: 0; entfernt alle Innenabstände des Elements (oben, rechts, unten, links).*/
-    margin: 0;/*margin ist der Außenabstand zwischen dem Rand eines Elements und anderen Elementen oder der Seite.
+	margin: 0;
+	/*margin ist der Außenabstand zwischen dem Rand eines Elements und anderen Elementen oder der Seite.
      margin: 0;   entfernt alle Außenabstände des Elements (oben, rechts, unten, links).
 */
-  }
+}
 
-  footer ul li {
-    display: inline;/*Das heißt, das Element wird neben anderen Elementen angezeigt, und der Inhalt wird nicht in einer neuen Zeile angezeigt.*/
-    margin: 0 15px;
-  }
+footer ul li {
+	display: inline;
+	/*Das heißt, das Element wird neben anderen Elementen angezeigt, und der Inhalt wird nicht in einer neuen Zeile angezeigt.*/
+	margin: 0 15px;
+}
 
-  footer ul li a {
-    color: wheat;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    color: grey;
-  }
+footer ul li a {
+	color: wheat;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+	color: grey;
+}
 
-  footer ul li a:hover {
-    color: #1e6e5e;
-    text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;}
+footer ul li a:hover {
+	color: #1e6e5e;
+	text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+}
 
 header {
-      text-align: center;
+	text-align: center;
 
 
-border-radius: 100px;
-background: transparent;
-      font-family: cursive;
-      font-size: 25px;
-color:wheat;
-      text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #c619e3, 0 0 40px #ff00cc;/* تأثير توهج وردي حول النص */
-      animation:
+	border-radius: 100px;
+	background: transparent;
+	font-family: cursive;
+	font-size: 25px;
+	color: wheat;
+	text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #c619e3, 0 0 40px #ff00cc;
+	/* تأثير توهج وردي حول النص */
+	animation:
 
-              pulse 5s infinite,
+		pulse 5s infinite,
 
-              float 6s ease-in-out infinite;
+		float 6s ease-in-out infinite;
 
-      margin-top: 0px;
+	margin-top: 0px;
 
-
-    }
-
-
-
-
-
-
-    @keyframes pulse {
-      0%, 100% {
-        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc, 0 0 40px #ff00cc;
-      }
-      50% {
-        text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff99cc, 0 0 40px #ff99cc, 0 0 50px #ff99cc;
-      }
-
-
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-
-    }
-    @keyframes{
-        from{
-            filter: hue-rotate(0deg);
-
-        }
-        to{filter: hue-rotate(360deg)}
-    }
-    #h22{
-  border: none;
-      list-style: none;
-      box-shadow: 0 0 10px rgb(214, 18, 18);
-      font-size: 100px;
-      background:transparent;
-
-        height: 50px;
-      width: 50px;
-      color: black;
-    position: relative;
-      left: 500px;
-    }
-    .wrapper{
-    width: 500px;/*عرض العنص*/
-        height: 600px;
-    background: rosybrown;/**/
-    color: wheat;/**/
-    border-radius: 40px;/**/
-    padding: 0px 0px;/*مسافة داخلية كبيرة*/
-    align-items: center;/**/
-
-    border: 2px solid rgba(255,255,255,.2);/*حدود شفافة*/
-    backdrop-filter: blur(39px);/*تأثير زجاجي ضبابي*/
-        box-shadow: 0 0 10px rgba(0,0,0,.2);/*ظل ناعم*/
-       /*محاذاة داخلية للعنصر*/
-    background: transparent;/*خلفية شفافة*/
-  /*تحريك العنصر للأسفل قليلاzu seite */
-    /*تحريك العنصر للأسفل قليلاً*/
-
-transform: translatey(-1000px);
-    transform: translateX(500px);
-}
-.wrapper h1{
-    font-size: 36px;/* حجم الخط */
-    text-align: center; /* النص في المنتصف */
-align-items: center;
-     text-shadow: 0 0 10px #ffffff, 0 0 20px #da2259, 0 0 30px #da224d;
 
 }
+
+
+
+
+
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc, 0 0 40px #ff00cc;
+	}
+
+	50% {
+		text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff99cc, 0 0 40px #ff99cc, 0 0 50px #ff99cc;
+	}
+
+
+}
+
+@keyframes float {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+
+}
+
+@keyframes {
+	from {
+		filter: hue-rotate(0deg);
+
+	}
+
+	to {
+		filter: hue-rotate(360deg)
+	}
+}
+
+#h22 {
+	border: none;
+	list-style: none;
+	box-shadow: 0 0 10px rgb(214, 18, 18);
+	font-size: 100px;
+	background: transparent;
+
+	height: 50px;
+	width: 50px;
+	color: black;
+	position: relative;
+	left: 500px;
+}
+
+.wrapper {
+	width: 500px;
+	/*عرض العنص*/
+	height: 600px;
+	background: rosybrown;
+	/**/
+	color: wheat;
+	/**/
+	border-radius: 40px;
+	/**/
+	padding: 0px 0px;
+	/*مسافة داخلية كبيرة*/
+	align-items: center;
+	/**/
+
+	border: 2px solid rgba(255, 255, 255, .2);
+	/*حدود شفافة*/
+	backdrop-filter: blur(39px);
+	/*تأثير زجاجي ضبابي*/
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	/*ظل ناعم*/
+	/*محاذاة داخلية للعنصر*/
+	background: transparent;
+	/*خلفية شفافة*/
+	/*تحريك العنصر للأسفل قليلاzu seite */
+	/*تحريك العنصر للأسفل قليلاً*/
+
+	transform: translatey(-1000px);
+	transform: translateX(500px);
+}
+
+.wrapper h1 {
+	font-size: 36px;
+	/* حجم الخط */
+	text-align: center;
+	/* النص في المنتصف */
+	align-items: center;
+	text-shadow: 0 0 10px #ffffff, 0 0 20px #da2259, 0 0 30px #da224d;
+
+}
+
 .wrapper .input-box {
-    position: relative;/* تحديد موضع نسبي */
-    width: 100%; /* بعرض كامل */
-    height:50px ;/* ارتفاع ثابت */
-    background: 00px;
-    margin:30px 0;/* هامش عمودي */
-text-shadow: 0 0 10px #ffffff, 0 0 20px #da2259, 0 0 30px #da224d;
-    font-size: 25px;
+	position: relative;
+	/* تحديد موضع نسبي */
+	width: 100%;
+	/* بعرض كامل */
+	height: 50px;
+	/* ارتفاع ثابت */
+	background: 00px;
+	margin: 30px 0;
+	/* هامش عمودي */
+	text-shadow: 0 0 10px #ffffff, 0 0 20px #da2259, 0 0 30px #da224d;
+	font-size: 25px;
 
 }
-.input-box input{
-    width:300px;
-    height: 100%;
-    background:transparent;
-    border:100px;
-    outline: 100px;/* بدون إطار عند التحديد */
-    border: 3px Solid rgba(255,255,255.2);/* حدود شفافة */
-    border-radius: 40px;
-    font-size: 16px;
+
+.input-box input {
+	width: 300px;
+	height: 100%;
+	background: transparent;
+	border: 100px;
+	outline: 100px;
+	/* بدون إطار عند التحديد */
+	border: 3px Solid rgba(255, 255, 255.2);
+	/* حدود شفافة */
+	border-radius: 40px;
+	font-size: 16px;
 
 }
-.input-box input::placeholder{
-    color:grey; /* لون النص داخل الحقل */
 
+.input-box input::placeholder {
+	color: grey;
+	/* لون النص داخل الحقل */
 
-
-}
-.input-box i{
-position: absolute; /* تموضع حر داخل الحقل */
-    right:100px;
-    top: 23px;
-    translateY(-50%);
-    font-size: 30px;
-    color: grey;
-    font-size: 16px;
-
-}
-#remember-forgot{
-display: flex;
-    justify-content: space-between;/* توزيع بالتساوي platz in die miete */
-    font-size: 16px;
-    margin: -10px 20px 15px; /* Abstand هامش علوي وسفلي */
 
 
 }
-#remember-forgot label input{
-    accent-color: red;  /* لون علامة التحديد */
-    margin-right: 3px;/*  richtung rechtهامش علوي وسفلي */
-    color:grey;
+
+.input-box i {
+	position: absolute;
+	/* تموضع حر داخل الحقل */
+	right: 100px;
+	top: 23px;
+	translateY(-50%);
+	font-size: 30px;
+	color: grey;
+	font-size: 16px;
+
+}
+
+#remember-forgot {
+	display: flex;
+	justify-content: space-between;
+	/* توزيع بالتساوي platz in die miete */
+	font-size: 16px;
+	margin: -10px 20px 15px;
+	/* Abstand هامش علوي وسفلي */
 
 
 }
-#remember-forgot a:hover{
 
-    text-decoration: underline;/* خط أسفل الرابط عند المرور */
+#remember-forgot label input {
+	accent-color: red;
+	/* لون علامة التحديد */
+	margin-right: 3px;
+	/*  richtung rechtهامش علوي وسفلي */
+	color: grey;
+
+
 }
-button{
 
-    transform: translateX(50px);
-    width: 100px;
-    height: 50px;
-    background: #da2259;
-    border: none;
-    border-top-color: rosybrown;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgb(12, 5, 5);
-    cursor: pointer;   /* شكل المؤشر عند المرور */
-    font-size: 16px;
-    color: darkslategray;
-    font-weight: 600; /*تعني "سماكة الخط" أو "وزن الخط*/
-    background: white;
-    align-items: center;/*محاذاة العناصر الداخلية (الأبناء) في منتصف المحور العمودي (من الأعلى إلى الأسفل).*/
-      margin: 10px 150px 15px;
+#remember-forgot a:hover {
+
+	text-decoration: underline;
+	/* خط أسفل الرابط عند المرور */
 }
-#h13{
-font-size: 16px;
-    text-align: center;
 
+button {
 
-    margin-right: 3px;
+	transform: translateX(50px);
+	width: 100px;
+	height: 50px;
+	background: #da2259;
+	border: none;
+	border-top-color: rosybrown;
+	outline: none;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgb(12, 5, 5);
+	cursor: pointer;
+	/* شكل المؤشر عند المرور */
+	font-size: 16px;
+	color: darkslategray;
+	font-weight: 600;
+	/*تعني "سماكة الخط" أو "وزن الخط*/
+	background: white;
+	align-items: center;
+	/*محاذاة العناصر الداخلية (الأبناء) في منتصف المحور العمودي (من الأعلى إلى الأسفل).*/
+	margin: 10px 150px 15px;
 }
+
+#h13 {
+	font-size: 16px;
+	text-align: center;
+
+
+	margin-right: 3px;
+}
+
 #h13:hover {
-    text-decoration: underline;
-     text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+	text-decoration: underline;
+	text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
 }
-#h14   {
-    font-size: 16px;
-     color: wheat;
-    text-decoration: none;/*إزالة كل الزخارف أو التأثيرات من النص — مثل الخط السفلي (underline).*/
-}
-#h14:hover{
-    text-decoration: underline;
-    text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
-}
-p a{
-    color:wheat;
-    text-decoration: none;
-    font-weight: 25px;
-    font-size: 16px;
-}
-p a:hover{ /*تعني: "عند تمرير مؤشر الفأرة فوق العنصر" :hover*/
-    text-decoration: underline;
-     text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
-}
-header,footer{
 
-   padding:20px;/*innen abstand */
-    color: #ffffff;
+#h14 {
+	font-size: 16px;
+	color: wheat;
+	text-decoration: none;
+	/*إزالة كل الزخارف أو التأثيرات من النص — مثل الخط السفلي (underline).*/
 }
-header{
-    background-color: #b82c2c;}
+
+#h14:hover {
+	text-decoration: underline;
+	text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+}
+
+p a {
+	color: wheat;
+	text-decoration: none;
+	font-weight: 25px;
+	font-size: 16px;
+}
+
+p a:hover {
+	/*تعني: "عند تمرير مؤشر الفأرة فوق العنصر" :hover*/
+	text-decoration: underline;
+	text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+}
+
+header,
+footer {
+
+	padding: 20px;
+	/*innen abstand */
+	color: #ffffff;
+}
+
+header {
+	background-color: #b82c2c;
+}

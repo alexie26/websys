@@ -3,38 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}Meine App{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="{{ url_for('startseite') }}">Start</a>
-      {% if 'user_id' in session %}
-        <span>Hallo, {{ session.benutzername }}</span>
+  <header class="main-header">
+	<div class="header-links">
+		<img src="{{ url_for('static', filename='logo.jpg') }}" alt="Bellaswipe" class="logo">
+		<div class="logo-text">BELLASWIPE</div>
+	</div>
+    <nav class="nav-links">
+      <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('logout') }}">Logout</a>
-      {% else %}
         <a href="{{ url_for('login') }}">Login</a>
         <a href="{{ url_for('register') }}">Registrieren</a>
-      {% endif %}
     </nav>
   </header>
 
   <main>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        <ul class="flashes">
-          {% for category, msg in messages %}
-            <li class="{{ category }}">{{ msg }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-
-    {% block content %}{% endblock %}
+    smth i dont have yet
   </main>
 
   <footer>
-    &copy; 2025 Meine App
+	<div class="page-wrapper">
+		
+	</div>
+		<section class="footer-section">
+			<p>Contact us at:
+			</p>
+		</section>
   </footer>
 </body>
 </html>
